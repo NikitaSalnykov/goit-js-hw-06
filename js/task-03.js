@@ -25,4 +25,5 @@ images.forEach((image) => {
 
 galleryList.style.display = 'flex';
 galleryList.style.gap = '30px';
+galleryList.style.listStyle = 'none';
 console.log(galleryList);
