@@ -23,7 +23,6 @@ function onButtonCreate (event) {
   box.style.backgroundColor=`${getRandomHexColor()}`;
   box.classList.add('box--el')
   boxes.appendChild(box)
-  console.log(boxes.childElementCount);
 }}
 
 
@@ -31,7 +30,6 @@ function onButtonDestroy (event) {
   const sumBox = boxes.childElementCount
   for (let i = 0; i < sumBox; i+=1) {
     const boxEl = boxes.querySelector('.box--el')
-    console.log(boxEl);
     boxEl.remove()
   } 
 }
