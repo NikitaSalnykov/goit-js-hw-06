@@ -8,7 +8,9 @@ rangeFontSize.addEventListener('input', onRangeInput)
 function onRangeInput(event) {
         console.log(rangeFontSize.value);
   if (rangeFontSize.value === rangeFontSize.max) {
-    console.log("Ну все досить, це максимум");
+    console.log("Досить тягнути, це максимум");
+  } else if (rangeFontSize.value === rangeFontSize.min) {
+    console.log("Менше вже не буде");
   }
   text.style.fontSize = `${rangeFontSize.value}px`
 }
