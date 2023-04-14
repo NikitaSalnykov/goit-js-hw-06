@@ -29,7 +29,7 @@ function onButtonCreate (event) {
 
 function onButtonDestroy (event) {
   const sumBox = boxes.childElementCount
-  for (let i = 0; i < totalBox; i+=1) {
+  for (let i = 0; i < sumBox; i+=1) {
     const boxEl = boxes.querySelector('.box--el')
     console.log(boxEl);
     boxEl.remove()
