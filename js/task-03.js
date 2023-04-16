@@ -15,15 +15,13 @@ const images = [
 
 
 const galleryList = document.querySelector('.gallery');
-
-images.forEach((image) => {
-  galleryList.insertAdjacentHTML('afterbegin', '<li><img src="" alt=""></li>')
-  const galleryImage = galleryList.querySelector('li img');
-  galleryImage.src = image.url;
-  galleryImage.alt = image.alt;
-})
+const galleryImages = galleryList.querySelector('img')
 
 galleryList.style.display = 'flex';
 galleryList.style.gap = '30px';
 galleryList.style.listStyle = 'none';
-console.log(galleryList);
+
+const galleryItems = images.map((image) => `<li><img src="${image.url}" alt="${image.alt}"></li>`).join("")
+console.log(galleryItems);
+galleryList.insertAdjacentHTML('afterbegin', galleryItems)
+

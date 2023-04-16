@@ -12,11 +12,19 @@ function onFormSubmit (event) {
     window.alert(" All fields must be filled!")
     } else {
 
-    const formData = new FormData(event.currentTarget);
-    formData.forEach((value, name) => {
-        console.log(name, ':', value);
-    
+        const formData = {
+            email: emailInput,
+            password: passwordInput,
+        };
+
+    console.log(formData);
     loginForm.reset()
-    })
-}
+
+        }
+
+    // const formData = new FormData(event.currentTarget);
+    // formData.forEach((value, name) => {
+    //     console.log(name, ':', value);
+    // loginForm.reset()
+    // })
 }
